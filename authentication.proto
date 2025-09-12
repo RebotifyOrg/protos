@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = "github.com/RebotifyOrg/iam/protos";
+
+service Authorization {
+  rpc Authorize (AuthorizeRequest) returns (AuthorizeReply);
+}
+
+message AuthorizeRequest {
+  string access_token = 1;
+}
+
+message AuthorizeReply {}
