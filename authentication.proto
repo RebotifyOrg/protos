@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package hello;
+package authorization;
 
 option go_package = "github.com/RebotifyOrg/iam/protos";
 
