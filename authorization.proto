@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package authorization;
 
-option go_package = "github.com/RebotifyOrg/protos;protos";
+option go_package = "protos";
 
 service Authorization {
   rpc Authorize (AuthorizeRequest) returns (AuthorizeReply);
