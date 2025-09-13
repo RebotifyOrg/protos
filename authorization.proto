@@ -13,4 +13,5 @@ service Authorization {
 message AuthorizationRequest {
   string access_token = 1;
   string creator_id = 2;
+  string section = 3;
 }
