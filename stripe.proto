@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package stripe;
+
+option go_package = "internal/protos";
+
+service Stripe {
+  rpc GetCustomerID (GetCustomerIDRequest) returns (GetCustomerIDResponse);
+  rpc SetCustomerID (SetCustomerIDRequest) returns (SetCustomerIDResponse);
+}
+
+message GetCustomerIDRequest {
+  string user_id = 1;
+}
+message GetCustomerIDResponse {
+  string customer_id = 1;
+}
+message SetCustomerIDRequest {
+  string user_id = 1;
+  string customer_id = 2;
+}
+message SetCustomerIDResponse {
+  string customer_id = 1;
+}
