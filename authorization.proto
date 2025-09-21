@@ -2,16 +2,17 @@ syntax = "proto3";
 
 package authorization;
 
-import "google/protobuf/empty.proto";
-
 option go_package = "internal/protos";
 
 service Authorization {
-  rpc Authorize (AuthorizationRequest) returns (google.protobuf.Empty);
+  rpc Authorize (AuthorizationRequest) returns (AuthorizationResponse);
 }
 
 message AuthorizationRequest {
   string access_token = 1;
   optional string creator_id = 2;
   optional string section = 3;
+}
+message AuthorizationResponse {
+  string user_id = 1;
 }
